@@ -1,11 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import {Route, Routes} from 'react-router-dom';
+import {Box} from '@mui/material';
 
 function App() {
   return (
-    <div className="App">
-     hello world
-    </div>
+    <Box width="400px">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/exercises/:id" element={<ExerciseDetail />} />
+      </Routes>
+    </Box>
   );
 }
 
